@@ -1,14 +1,12 @@
 const contains = function (object, searchValue) {
   const values = Object.values(object);
 
-  // NaN === NaN evaluates to false
-  // Normally, we would have to do an explicit Number.isNaN() check to compare NaN equality
-  // However, Array.prototype.includes automatically handles this for us
+  
   if (values.includes(searchValue)) return true;
 
   const nestedObjects = values.filter(
     // typeof null === 'object' evaluates to true ¯\_(ツ)_/¯
-    (value) => typeof value === "object" && value !== null
+    (value) => typeof value === "object" 
   );
 
   return nestedObjects.some((nestedObject) =>
@@ -16,5 +14,8 @@ const contains = function (object, searchValue) {
   );
 };
 
+
+//console.log(typeof hi === "object");
+console.log(contains({ji : {bi : "bi",di : "null",id : {fee : "tids"}}},"tids"));
 // Do not edit below this line
 module.exports = contains;
