@@ -5,7 +5,7 @@
 
 const addSalaries = function(n) {
 
-    if (typeof n !== 'object' || n === null) return 0;
+    //if (typeof n !== 'object' || n === null) return 0; // lol here guard clause is not even necessaruy , i got so fucking consufed here :<
 
     
     let objectValues = Object.values(n);
