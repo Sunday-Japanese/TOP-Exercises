@@ -19,4 +19,4 @@ const pascal = function (rowNumber) {
 };
 
 // Do not edit below this line
-module.exports = pascal;
+module.exports = pascal;//pretty easy compare to 4th one
